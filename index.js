@@ -17,6 +17,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.APP_PORT || 3000;
 const server_host = process.env.YOUR_HOST || '0.0.0.0';
+const frontend_url = process.env.FRONTEND_URL || 'http://localhost:5173';
 
 (async () => {
     try {
@@ -28,7 +29,7 @@ const server_host = process.env.YOUR_HOST || '0.0.0.0';
     }
 })();
 
-app.use(cors({ credentials:true, origin: 'http://localhost:5173'}));
+app.use(cors({ credentials:true, origin: frontend_url}));
 app.use(cookieParser());
 app.use(express.json());
 app.use(FileUpload());

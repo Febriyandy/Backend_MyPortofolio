@@ -9,9 +9,9 @@ const { verifyToken } = require ("../middleware/VerifyToken.js");
 
 const router = express.Router();
 
-router.get('/kontak', verifyToken, getKontak);
-router.get('/kontak/:id',verifyToken, getKontakById);
+router.get('/kontak',  getKontak);
+router.get('/kontak/:id', getKontakById);
 router.post('/kontak', createKontak);
-router.delete('/kontak/:id',verifyToken, deleteKontak);
+router.delete('/kontak/:id', deleteKontak);
 
 module.exports = router;
