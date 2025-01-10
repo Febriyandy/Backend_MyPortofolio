@@ -12,6 +12,7 @@ const ArtikelRoute = require("./routes/ArtikelRoute.js");
 const KontakRoute = require("./routes/KontakRoute.js");
 const UsersRoute = require ("./routes/UserRoute.js");
 const Sertifikat = require("./models/SertifikatModel.js");
+const Users = require("./models/UserModel.js")
 
 dotenv.config();
 const app = express();
@@ -23,7 +24,7 @@ const frontend_url = process.env.FRONTEND_URL || 'http://localhost:5173';
     try {
         await db.authenticate();
         console.log('Database Connected..');
-        //await Sertifikat.sync();
+        //await Users.sync();
     } catch (error) {
         console.error(error);
     }

@@ -14,8 +14,8 @@ const router = express.Router();
 router.get('/', Home);
 router.get('/skill', getSkill);
 router.get('/skill/:id', getSkillById);
-router.post('/tambahskill', verifyToken, createSkill);
-router.patch('/updateskill/:id',verifyToken, updateSkill);
-router.delete('/deleteskill/:id',verifyToken, deleteSkill);
+router.post('/tambahskill',  createSkill);
+router.patch('/updateskill/:id', updateSkill);
+router.delete('/deleteskill/:id', deleteSkill);
 
 module.exports = router;

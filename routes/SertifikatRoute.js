@@ -12,8 +12,8 @@ const router = express.Router();
 
 router.get('/sertifikat', getSertifikat);
 router.get('/sertifikat/:id', getSertifikatById);
-router.post('/tambahsertifikat',verifyToken, createSertifikat);
-router.patch('/updatesertifikat/:id',verifyToken, updateSertifikat);
-router.delete('/deletesertifikat/:id',verifyToken, deleteSertifikat);
+router.post('/tambahsertifikat', createSertifikat);
+router.patch('/updatesertifikat/:id', updateSertifikat);
+router.delete('/deletesertifikat/:id', deleteSertifikat);
 
 module.exports = router;
